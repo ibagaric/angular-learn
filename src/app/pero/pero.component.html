@@ -1,0 +1,60 @@
+<h1>
+  Title: {{marko}}
+  <input type="button" value="pero" (click)="ivan()">
+</h1>
+
+<div class="panel">
+
+</div>
+
+
+<!-- New row  -->
+<div class="row">
+
+  <div class="col-xs-4">
+
+    <likes [numOfLikes]="tweet.likesCount" [isSelected]="tweet.isLiked">
+    </likes>
+
+  </div>
+  <div class="col-xs-4">
+
+    <app-panel-component>
+      <ng-container class="heading">novi heading</ng-container>
+      <ng-container class="body">novi heading</ng-container>
+    </app-panel-component>
+
+  </div>
+
+  <div class="col-xs-4"></div>
+
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+
+    <hr>
+
+    <button class="btn btn-primary" (click)="addBook()">Add</button>
+    <button class="btn btn-success" (click)="loadBooks()">Load Book</button>
+
+    <hr>
+
+    <ul>
+      <li *ngFor="let book of books; even as isEven; trackBy: trackNewBooks " style="margin-bottom: 15px;">
+        <i>
+          <a type="button" class="btn btn-danger" [class.btn-sm]="isEven" (click)="removeBook(book)">
+            Delete
+          </a>
+        </i>
+
+        <span>- <strong>{{book.name }}</strong>  - {{book.autor}}</span>
+
+      </li>
+    </ul>
+
+
+
+
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.glyphicon{
+    color: green;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+.glyphicon.isSelected{
+    color: red;
+}
+
+i{
+    font-size: 50px;
+}
+
+*{
+    user-select: none;        
+}
